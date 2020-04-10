@@ -46,7 +46,8 @@ db.mongoose
   require("./app/routes/quiz.route")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+const PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+const server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+app.listen(PORT, server_ip_address, () => {
+  console.log(`Server is running on ${server_ip_address} and port ${PORT}.`);
 });
