@@ -14,7 +14,9 @@ exports.create = (req, res) => {
     quizId: req.body.quizId,
     isActive: req.body.isActive,
     isComplete: req.body.isComplete,
-    questions: req.body.questions
+    questions: req.body.questions,
+    quizDate: req.body.quizDate,
+    softDelete: req.body.softDelete
   });
 
   // Save Quiz in the database
