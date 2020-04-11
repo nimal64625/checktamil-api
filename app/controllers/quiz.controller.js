@@ -82,7 +82,7 @@ exports.getAllQuiz = (req, res) => {
 // Retrieve all completed Quiz from the database.
 exports.findArchiveQuizList = (req, res) => {
   
-  Quiz.find({isComplete: true}, {'quizId':1, 'quizDate':1})
+  Quiz.find({softDelete: false}, {'quizId':1, 'quizDate':1})
     .then(data => {
       res.send(data);
     })
