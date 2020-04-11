@@ -71,7 +71,7 @@ exports.deleteAll = (req, res) => {
 exports.findAllTopRanked = (req, res) => {
   const quizId = req.query.quizId;
 
-  QuizResults.find({quizId: quizId}).sort({score:-1}).limit(5)
+  QuizResults.find({quizId: quizId}).sort({score:-1}).limit(10)
     .then(data => {
       res.send(data);
     })
