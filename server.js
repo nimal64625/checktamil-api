@@ -8,7 +8,7 @@ var whitelist = ['http://localhost:3000', 'https://www.tamilbot.com', 'https://t
 var corsOptions = {
   origin: function (origin, callback) {
     console.log('origin:'+ origin);
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
+    if (whitelist.indexOf(origin) !== -1 || !origin || origin.indexOf("chrome-extension:") !== -1) {
       callback(null, true)
     } else {
       callback(new Error('Not allowed by CORS'))
