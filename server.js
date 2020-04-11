@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-var whitelist = ['http://localhost:3000', 'http://tamilbot.com', 'https://reverent-swartz-7dbd1e.netlify.com']
+var whitelist = ['http://localhost:3000', 'https://www.tamilbot.com', 'https://tamilbot.com', 'https://reverent-swartz-7dbd1e.netlify.com']
 var corsOptions = {
   origin: function (origin, callback) {
     console.log('origin:'+ origin);
