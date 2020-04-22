@@ -84,7 +84,7 @@ exports.getAllQuiz = (req, res) => {
 // Retrieve all completed Quiz from the database.
 exports.findArchiveQuizList = (req, res) => {
   
-  Quiz.find({softDelete: false}, {'quizId':1, 'quizDate':1}).sort({quizDate: -1})
+  Quiz.find({softDelete: false}, {'quizId':1, 'quizDate':1}).sort({quizDate: -1}).limit(7)
     .then(data => {
       res.send(data);
     })
