@@ -4,7 +4,7 @@ module.exports = mongoose => {
         {
             userName: String,
             quizId: String,
-            Rating: Number,
+            rating: Number,
             isRecommendParents: Boolean,
             isRecommendKids: Boolean,
             isRecommendFriends: Boolean,
