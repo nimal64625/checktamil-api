@@ -23,6 +23,12 @@ module.exports = app => {
   
     // Create a new Tutorial
     router.delete("/", quizResults.deleteAll);
-  
+
+    // Create a new Survey
+    router.post("/survey", quizResults.submitSurvey);
+
+    // Find all Surveys
+    router.get("/survey/all", quizResults.findAllSurvey);
+    
     app.use('/api/quizResults', router);
   };

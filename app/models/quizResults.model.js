@@ -5,7 +5,8 @@ module.exports = mongoose => {
             quizId: String,
             userName: String,
             score: Number,
-            submitTime: Date
+            submitTime: Date,
+            userResponses: []
         },
         { timestamps: true }
       );
