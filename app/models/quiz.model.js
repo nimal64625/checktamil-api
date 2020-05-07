@@ -7,6 +7,7 @@ module.exports = mongoose => {
             quizDate: Date,
             isComplete: Boolean,
             softDelete: Boolean,
+            isSurveyEnabled: { type: Boolean, default: false },
             questions: [
               {
                 text: String,
