@@ -53,6 +53,8 @@ exports.submitSurvey = (req, res) => {
       isRecommendFriends: req.body.surveyResponses.isRecommendFriends,
       isRecommendColleagues: req.body.surveyResponses.isRecommendColleagues,
       isRecommendYesNo: req.body.surveyResponses.isRecommendYesNo,
+      isVolunteer: req.body.surveyResponses.isVolunteer,
+      volunteerPhone: req.body.surveyResponses.volunteerPhone,
     submitTime: req.body.submitTime    
   });
 

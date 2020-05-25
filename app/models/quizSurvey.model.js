@@ -10,6 +10,8 @@ module.exports = mongoose => {
             isRecommendFriends: Boolean,
             isRecommendColleagues: Boolean,
             isRecommendYesNo: Boolean,
+            isVolunteer: Boolean,
+            volunteerPhone: Number,
             submitTime: { type: Date, default: Date.now },
         },
         { timestamps: true }
